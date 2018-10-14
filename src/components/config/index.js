@@ -7,6 +7,18 @@ const load = (env, defaults) =>
 		{}
 	);
 
+const is = config => prefix => config.NODE_ENV === prefix;
+
+const development = config => is(config)('development');
+const staging = config => is(config)('staging');
+const test = config => is(config)('test');
+const production = config => is(config)('production');
+
 module.exports = {
-	load
+	load,
+	is,
+	development,
+	staging,
+	test,
+	production
 };
