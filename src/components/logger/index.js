@@ -1,8 +1,8 @@
 const pino = require('pino');
 const pinoHttp = require('pino-http');
 
-const logger = (enabled = true) => pino({enabled});
-const logreq = pinoHttp({logger});
+const logger = options => pino(options);
+const logreq = logger => pinoHttp({logger});
 
 module.exports = {
 	logger,
