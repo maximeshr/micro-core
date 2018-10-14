@@ -1,5 +1,33 @@
 const test = require('ava');
-const {compose} = require('.');
+const request = require('request-promise');
+const listen = require('test-listen');
+const {compose, server, status} = require('.');
+
+const {send} = server;
+
+const getUrl = fn => listen(server(fn));
+
+test('should send(200, <String>)', async t => {
+	const fn = (req, res) => {
+		send(res, 200, 'foo');
+	};
+
+	const url = await getUrl(fn);
+	const res = await request(url, {resolveWithFullResponse: true});
+
+	t.is(res.statusCode, 200);
+	t.is(res.body, 'foo');
+});
+
+test('should send(200, <Empty>)', async t => {
+	const fn = status(200);
+
+	const url = await getUrl(fn);
+	const res = await request(url, {resolveWithFullResponse: true});
+
+	t.is(res.statusCode, 200);
+	t.is(res.body, '');
+});
 
 const first = fn => (first, second) => {
 	return fn(first, second, 'third');
