@@ -1,6 +1,6 @@
 {
   "name": "mini-core",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "🦄 mini-core is a library that host a lot of resources I use every day",
   "scripts": {
     "test": "NODE_ENV=test xo && ava"
