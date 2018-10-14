@@ -50,7 +50,7 @@ const third = fn => async (first, second, ...args) => {
 	return fn(first, second, ...args);
 };
 
-test('should compose correct', async t => {
+test('should compose correctly', async t => {
 	const composed = compose(
 		first,
 		second,
