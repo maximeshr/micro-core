@@ -11,6 +11,8 @@
   "license": "MIT",
   "dependencies": {
     "lodash": "4.17.11",
+    "micro": "9.3.3",
+    "micro-route": "2.5.0",
     "pino": "5.7.0",
     "pino-http": "4.0.0"
   },
