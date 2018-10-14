@@ -1,12 +1,20 @@
 {
   "name": "mini-core",
   "version": "0.0.1",
-  "description": "",
+  "description": "Mini is a small library that host a lot of ressources I use every day",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Maxime Sahroui <maxime.sahroui@gmail.com> (https://maximeshr.github.io)",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "0.25.0",
+    "backpack-core": "0.7.0",
+    "eslint": "5.7.0",
+    "eslint-config-xo": "0.25.0",
+    "nyc": "13.1.0",
+    "xo": "0.23.0"
+  }
 }
