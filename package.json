@@ -1,6 +1,6 @@
 {
   "name": "mini-core",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Mini is a small library that host a lot of ressources I use every day",
   "main": "index.js",
   "scripts": {
